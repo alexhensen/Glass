@@ -1,0 +1,104 @@
+name: Bug report
+description: Something doesn't work as expected.
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this! Please don't include personal information in logs or screenshots.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+      placeholder: "I pressed Shuffle, the key turned red but Apple Music didn't change."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add the Shuffle action to a key
+        2. Start a playlist in Apple Music
+        3. Press the key
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS version
+      placeholder: "macOS 26.1 / Windows 11 24H2"
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Stream Deck model
+      multiple: true
+      options:
+        - Stream Deck (MK.2 / 15 keys)
+        - Stream Deck Mini
+        - Stream Deck XL
+        - Stream Deck +
+        - Stream Deck + XL
+        - Stream Deck Neo
+        - Stream Deck Studio
+        - Virtual Stream Deck / Stream Deck Mobile
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: Which action?
+      multiple: true
+      options:
+        - Play / Pause
+        - Next / Previous Track
+        - Shuffle
+        - Repeat
+        - Favorite
+        - Volume
+        - Now Playing
+        - Play Playlist
+        - Add to Playlist
+        - Sleep Timer
+        - Multimedia (dial)
+        - Browse Playlists (dial)
+        - Now Playing (Infobar)
+        - Look & feel / artwork
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Stream Deck app (Preferences → General), plugin (Preferences → Plugins) and Apple Music.
+      placeholder: "Stream Deck 7.6.0, plugin 0.1.0, Apple Music 1.5.4"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Plugin log
+      description: |
+        Attach or paste the newest log file from:
+        - macOS: `~/Library/Application Support/com.elgato.StreamDeck/Plugins/com.alexhensen.applemusic.sdPlugin/logs/`
+        - Windows: `%APPDATA%\Elgato\StreamDeck\Plugins\com.alexhensen.applemusic.sdPlugin\logs\`
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or video
+      description: Drag images or a short video here if it helps.
