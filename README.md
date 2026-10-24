@@ -39,7 +39,8 @@
 
 | Feature | macOS | Windows |
 |---|---|---|
-| Play/pause, next, previous, shuffle, repeat | ✅ | ✅ |
+| Play/pause, next, previous | ✅ | ✅ |
+| Shuffle, repeat | ✅ | 🧪 |
 | Now Playing (keys, touch strip, Neo infobar) | ✅ | ✅ |
 | Volume and mute | ✅ | ✅ |
 | Sleep timer, Multimedia dial | ✅ | ✅ |
